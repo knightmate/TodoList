@@ -46,8 +46,16 @@ const reducer=(preState:Todo[],Action:Action)=>{
      
        case Type.EDIT:{
         console.log(Type.EDIT+"---------")
-        
-        return preState;
+      const updateState=  preState.map((item)=>{
+             if(item.id==Action.payload.id){
+               item.todo=Action.payload.todo
+               return item;
+             }
+             return item;
+        })
+        return[
+          ...updateState
+        ]
        
        };
 

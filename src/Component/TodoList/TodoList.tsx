@@ -1,19 +1,15 @@
 import React from 'react';
 import { Action ,Type} from '../../App';
 import { Todo } from '../../model';
+import TodoItem from '../TodoItem/TodoItem';
 
 const TodoList = ({todoList,dispatch}:{todoList:Todo[],dispatch:React.Dispatch<Action>}) => {
     return (
         <div>
         {todoList.map((item)=>{
-            return(<> <div>{item.todo}</div>
-            <button onClick={()=>{
-               dispatch({
-                   type:Type.DELETE,
-                   payload:item
-               });
-            }}>Delete</button>
-            </>)
+            return(
+                <TodoItem itemData={item} dispatch={dispatch}></TodoItem>
+            )
 
         })}
         </div>
