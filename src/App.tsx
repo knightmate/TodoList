@@ -6,7 +6,7 @@ import { Todo } from './model';
 import { isReturnStatement } from 'typescript';
 import TodoList from './Component/TodoList/TodoList';
 
-enum Type {
+export enum Type {
   ADD = 'ADD',
   EDIT = 'EDIT',
   MARK_COMPLETE="MARK_COMPLETE",
@@ -36,7 +36,11 @@ const reducer=(preState:Todo[],Action:Action)=>{
       case Type.DELETE:{
         console.log(Type.DELETE+"---------")
          
-        return preState;
+      const updatedState=preState.filter((item)=>item.id!==Action.payload.id)
+
+        return [
+         ...updatedState
+        ];
         
        }
      
@@ -74,7 +78,7 @@ function App() {
           dispatch({
              type:Type.ADD,
              payload:{
-               id:"",
+               id:Date.now().toString(),
                todo:inputText,
                isCompleted:false
              }
