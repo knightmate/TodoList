@@ -31,8 +31,11 @@ const TodoItem =({itemData,dispatch}:Props)=> {
         }}>
           {
           isEdit?(
-            <input value={editData} onChange={(event)=>{
+            <input
+           
+            value={editData} onChange={(event)=>{
                 const val=event.target.value;
+                
                 seteditData(val);
             }}></input>
           ):(
@@ -48,9 +51,28 @@ const TodoItem =({itemData,dispatch}:Props)=> {
           <button>MarkDone</button> */}
 
        <div>
-        <AiFillEdit cursor="pointer" color='black' size="20px"></AiFillEdit>
-        <AiOutlineDelete cursor="pointer" color="black"  size="20px"></AiOutlineDelete>
-        <AiOutlineCheck cursor="pointer" color="black" size="20px"></AiOutlineCheck>
+        <AiFillEdit cursor="pointer" color='black' style={{margin:"2px"}} size="20px" onClick={()=>{
+              setEdit(true);
+              seteditData(itemData.todo);
+          }}></AiFillEdit>
+
+
+        <AiOutlineDelete cursor="pointer" color="black"  style={{margin:"2px"}} size="20px"
+        onClick={()=>{
+            dispatch({
+                type:Type.DELETE,
+                payload:itemData
+            })
+        }}
+        ></AiOutlineDelete>
+        <AiOutlineCheck cursor="pointer" color="black" style={{margin:"2px"}} size="20px"
+        onClick={()=>{
+            dispatch({
+                type:Type.MARK_COMPLETE,
+                payload:itemData
+            })
+        }}
+        ></AiOutlineCheck>
 
        </div>
         </form>

@@ -61,8 +61,18 @@ const reducer=(preState:Todo[],Action:Action)=>{
 
        case Type.MARK_COMPLETE:{
         console.log(Type.MARK_COMPLETE+"---------")
-         
-        return preState;
+        const updateState=  preState.map((item)=>{
+          if(item.id==Action.payload.id){
+            item.isCompleted =true;
+            return item;
+          }
+          return item;
+     })
+     return[
+       ...updateState
+     ]
+    
+      
       }
 
     default : return preState;

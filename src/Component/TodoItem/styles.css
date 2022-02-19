@@ -12,5 +12,6 @@
    display:flex;
    flex: 1 1 100px;
    padding: 10px;   
-
+  font-family: "Shizuru";
+  font-size: larger;
 }
