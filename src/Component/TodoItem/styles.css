@@ -1,0 +1,16 @@
+.todo_item_form{
+    display:flex;
+     width: fit-content;
+     border-radius: 1px;
+     width: 100%;
+     margin-top: 7px;
+     margin-bottom: 7px;
+}
+
+.todo_item_title{
+
+   display:flex;
+   flex: 1 1 100px;
+   padding: 10px;   
+
+}

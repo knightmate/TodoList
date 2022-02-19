@@ -78,8 +78,8 @@ function App() {
    
   return (
     <div className="App">
-
-       <InputField onSearch={(event:React.FormEvent,inputText:string)=>{
+     <div style={{display:"flex",justifyContent:'center'}}>      
+        <InputField onSearch={(event:React.FormEvent,inputText:string)=>{
         event.preventDefault();
 
          console.log("text",inputText);
@@ -93,6 +93,7 @@ function App() {
           })
 
        }}></InputField>
+       </div>
 
        <TodoList todoList={state} dispatch={dispatch}></TodoList>
 

@@ -1,5 +1,11 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+   text-align: center;
+  background-color: #2f74c0;
+  font-family: "Neucha",cursive;
 }
 
 .App-logo {
@@ -35,4 +41,47 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+
+}
+
+.todo_list_active_task{
+  min-width: 300px;
+  display: flex;
+  flex: 1 1 40%;
+  text-align: center;
+  flex-direction: column;
+  background-color: pink;
+  padding: 10px;
+
+}
+.todo_list_completed_task{
+  min-width: 300px;
+  display: flex;
+  flex: 1 1 40%;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #eb6750;
+}
+
+.todo_list_header{
+
+  text-align: center;
+  display: inline-block;
+  
+  font-family:'Lobster';
+  color: coral;
+  margin:5px;
+
 }

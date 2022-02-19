@@ -1,18 +1,23 @@
 import React from 'react';
 import { Action ,Type} from '../../App';
 import { Todo } from '../../model';
+import './styles.css';
+import { AiFillEdit  ,AiOutlineDelete,AiOutlineCheck} from "react-icons/ai";
 
-interface Props{
-    
+interface Props{    
   itemData:Todo    
   dispatch:React.Dispatch<Action>
 }
+
 const TodoItem =({itemData,dispatch}:Props)=> {
     const [isEdit,setEdit]=React.useState(false);
     const [editData,seteditData]=React.useState("");
 
+
+//`url(${image})`
     return (
-        <form onSubmit={(event:React.FormEvent)=>{
+        <>
+        <form style={{backgroundImage:`url(https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?ext=jpg&size=626)`}} className='todo_item_form' onSubmit={(event:React.FormEvent)=>{
            
            event.preventDefault();
            setEdit(false);
@@ -31,17 +36,26 @@ const TodoItem =({itemData,dispatch}:Props)=> {
                 seteditData(val);
             }}></input>
           ):(
-            <span style={{margin:"15px"}}>{itemData.todo}</span>
+            <span className="todo_item_title">{itemData.todo}</span>
           )
           }
-
-          <button type="button" onClick={()=>{
+          
+          {/* <button type="button" onClick={()=>{
               setEdit(true);
               seteditData(itemData.todo);
           }}>Edit</button>
           <button>Delete</button> 
-          <button>MarkDone</button>
+          <button>MarkDone</button> */}
+
+       <div>
+        <AiFillEdit cursor="pointer" color='black' size="20px"></AiFillEdit>
+        <AiOutlineDelete cursor="pointer" color="black"  size="20px"></AiOutlineDelete>
+        <AiOutlineCheck cursor="pointer" color="black" size="20px"></AiOutlineCheck>
+
+       </div>
         </form>
+         
+    </>
     );
 };
 
