@@ -32,7 +32,7 @@ const TodoItem =({itemData,dispatch}:Props)=> {
           {
           isEdit?(
             <input
-           
+           className='todo_item_title'
             value={editData} onChange={(event)=>{
                 const val=event.target.value;
                 

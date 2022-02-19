@@ -88,7 +88,9 @@ function App() {
    
   return (
     <div className="App">
-     <div style={{display:"flex",justifyContent:'center'}}>      
+        <header className='app_title'>TaskOO</header>
+     <div style={{display:"flex",justifyContent:'center'}}>  
+         
         <InputField onSearch={(event:React.FormEvent,inputText:string)=>{
         event.preventDefault();
 

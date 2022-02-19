@@ -5,10 +5,18 @@
      width: 100%;
      margin-top: 7px;
      margin-bottom: 7px;
+     transition: all 0.5s;
 }
 
-.todo_item_title{
+  .todo_item_form:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.03); 
+    outline: 1px solid;
+  }
 
+.todo_item_title{
+  
    display:flex;
    flex: 1 1 100px;
    padding: 10px;   
