@@ -1,0 +1,79 @@
+.todo_item_form{
+    display:flex;
+     width: fit-content;
+     border-radius: 1px;
+     width: 100%;
+     margin-top: 7px;
+     margin-bottom: 7px;
+     transition: all 0.5s;
+}
+
+  .todo_item_form:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.03); 
+    outline: 1px solid;
+  }
+
+.todo_item_title{
+  
+   display:flex;
+   flex: 1 1 100px;
+   padding: 10px;   
+  font-family: "Shizuru";
+  font-size: larger;
+}
+
+
+body {
+  padding: 40px;
+}
+
+/* Animation */
+
+@keyframes topDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  
+}
+@keyframes fadeInUp {
+  /* from {
+      transform: translate3d(10px,0px,10px)
+  } */
+
+  /* to {
+      transform: translate3d(0,0,0);
+      opacity: 0
+  } */
+}
+
+@-webkit-keyframes fadeInUp {
+  /* from {
+      transform: translate3d(0,10px,0)
+  } */
+
+  /* to {
+      transform: translate3d(0,0,0);
+      opacity: 0
+  } */
+}
+
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  /* -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: both */
+}
+
+.animatedFadeOutUp {
+  opacity: 1
+}
+
+.fadeOutUp {
+  color: green;
+  opacity: 1;
+  animation-name: topDown;
+  -webkit-animation-name: topDown;
+}
