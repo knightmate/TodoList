@@ -13,6 +13,14 @@ const TodoItem =({itemData,dispatch}:Props)=> {
     const [isEdit,setEdit]=React.useState(false);
     const [editData,seteditData]=React.useState("");
 
+    /**
+     * 
+     *Animattion is implement for adding todo-which is top-down now 
+     on every delete or completed task we need to customize the animation of css
+     
+     refer- https://www.youtube.com/watch?v=r61mCFu7uTM&t=3826s
+     we need to build fadable component and render every item through fadable component
+     */
 
 //`url(${image})`
     return (
