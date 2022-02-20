@@ -23,3 +23,57 @@
   font-family: "Shizuru";
   font-size: larger;
 }
+
+
+body {
+  padding: 40px;
+}
+
+/* Animation */
+
+@keyframes topDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  
+}
+@keyframes fadeInUp {
+  /* from {
+      transform: translate3d(10px,0px,10px)
+  } */
+
+  /* to {
+      transform: translate3d(0,0,0);
+      opacity: 0
+  } */
+}
+
+@-webkit-keyframes fadeInUp {
+  /* from {
+      transform: translate3d(0,10px,0)
+  } */
+
+  /* to {
+      transform: translate3d(0,0,0);
+      opacity: 0
+  } */
+}
+
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  /* -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: both */
+}
+
+.animatedFadeOutUp {
+  opacity: 1
+}
+
+.fadeOutUp {
+  color: green;
+  opacity: 1;
+  animation-name: topDown;
+  -webkit-animation-name: topDown;
+}

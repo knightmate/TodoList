@@ -64,14 +64,14 @@
   flex-direction: column;
   background-color: pink;
   padding: 10px;
-  min-height: 100px;
+  min-height: 50px;
    
 }
 .todo_list_completed_task{
   min-width: 300px;
   display: flex;
   flex: 1 1 40%;
-  min-height: 100px;
+  min-height: 50px;
   text-align: center;
   flex-direction: column;
   padding: 10px;

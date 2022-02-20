@@ -17,7 +17,7 @@ const TodoItem =({itemData,dispatch}:Props)=> {
 //`url(${image})`
     return (
         <>
-        <form style={{backgroundImage:`url(https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?ext=jpg&size=626)`}} className='todo_item_form' onSubmit={(event:React.FormEvent)=>{
+        <form className={'animated animatedFadeOutUp fadeOutUp todo_item_form'} style={{backgroundImage:`url(https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?ext=jpg&size=626)`}}   onSubmit={(event:React.FormEvent)=>{
            
            event.preventDefault();
            setEdit(false);
